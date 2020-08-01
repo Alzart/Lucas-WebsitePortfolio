@@ -51,8 +51,21 @@ const ProjectsPage = () => {
           />
         </svg>
       </div>
-
       {displaySelectedProject()}
+      <div style={{ display: "flex", margin: "5vh auto" }}>
+        <p
+          style={{
+            textTransform: "uppercase",
+            margin: "auto",
+            fontFamily: "Raleway",
+            fontSize: "30px",
+            cursor: "pointer",
+            color: "#000",
+          }}
+        >
+          Back To Top
+        </p>
+      </div>
     </Layout>
   )
 }

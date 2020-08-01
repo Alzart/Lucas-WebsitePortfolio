@@ -52,6 +52,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         <Img
           className="image"
           fluid={data.dunamis.childImageSharp.fluid}
+          imgStyle={{ objectPosition: "65% 50%" }}
           style={{ width: "100%", height: "100%" }}
         />
         <h3>Dunamis</h3>
@@ -68,6 +69,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         <Img
           className="image"
           fluid={data.documencia.childImageSharp.fluid}
+          imgStyle={{ objectPosition: "55% 50%" }}
           style={{ width: "100%", height: "100%" }}
         />
         <h3>Documentia</h3>
@@ -84,6 +86,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         <Img
           className="image"
           fluid={data.sodexo.childImageSharp.fluid}
+          imgStyle={{ objectPosition: "40% 50%" }}
           style={{ width: "100%", height: "100%" }}
         />
         <h3>Sodexo</h3>
@@ -100,7 +103,12 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         <Img
           className="image"
           fluid={data.concept.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
+          //@ts-ignore
+          imgStyle={{ objectPosition: "55% 50%" }}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
         />
         <h3>Concept</h3>
         <p>Here is some personnal and narrative images.</p>

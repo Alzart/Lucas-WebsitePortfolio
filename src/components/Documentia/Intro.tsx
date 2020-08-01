@@ -23,8 +23,8 @@ function Intro() {
       <Img
         fluid={data.image.childImageSharp.fluid}
         style={{
-          width: "502px",
-          height: "334px",
+          width: "500px",
+          height: "350px",
           margin: "auto",
         }}
       />
@@ -38,19 +38,14 @@ function Intro() {
 }
 export default Intro
 const Wrapper = styled.div`
-  height: 500px;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
   display: flex;
+  margin: 5vh auto;
   p {
     margin: auto;
     width: 362px;
     font-family: Manjari;
-    font-style: normal;
     font-size: 24px;
     line-height: 28px;
-
-    color: #000000;
+    color: #000;
   }
 `

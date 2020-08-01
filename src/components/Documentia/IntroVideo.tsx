@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 function IntroVideo() {
   return (
@@ -20,7 +18,6 @@ function IntroVideo() {
         >
           here
         </span>
-        .
       </p>
     </Wrapper>
   )
@@ -28,16 +25,14 @@ function IntroVideo() {
 export default IntroVideo
 const Wrapper = styled.div`
   align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  margin: 5vh auto;
 
   p {
     font-family: Manjari;
-    font-style: normal;
     font-size: 24px;
-    line-height: 28px;
-    color: #000000;
+    color: #000;
     span {
       color: #000000;
       text-decoration: none;

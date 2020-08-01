@@ -41,7 +41,7 @@ function HomePageCarousel() {
               key={image}
               fluid={image}
               alt="Image No Found"
-              style={{ height: "100%" }}
+              style={{ height: "100vh", minWidth: "100%" }}
             />
           )
         })}
