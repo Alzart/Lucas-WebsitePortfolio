@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway/Raleway-Black.ttf");
+}
+@font-face {
+  font-family: Manjari;
+  src: url("../fonts/Manjari/Manjari-Bold.ttf");
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
