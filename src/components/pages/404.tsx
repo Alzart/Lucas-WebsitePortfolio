@@ -1,10 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../layout"
+import SEO from "../seo"
 
-const NotFoundPage = () => {
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+}
+
+const NotFoundPage = ({ data }: Props) => {
   return (
     <Layout location={window.location}>
       <SEO title="404: Not Found" />

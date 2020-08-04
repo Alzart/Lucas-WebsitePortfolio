@@ -1,5 +1,4 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -32,7 +31,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
           }
         }
       }
-      concept: file(relativePath: { eq: "04_Concept/Sophie15.jpg" }) {
+      concept: file(relativePath: { eq: "Sophie15.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

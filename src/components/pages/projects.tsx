@@ -1,13 +1,14 @@
 import React, { useState } from "react"
-import ProjectSeletor from "../components/ProjectSelector"
-import Ducumentcia from "../components/Documentia"
-import Concept from "../components/Concepts"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Dunamis from "../components/Dunamis"
+import ProjectSeletor from "../ProjectSelector"
+import Documentcia from "../Documentia"
+import Dunamis from "../Dunamis"
+import Concepts from "../Concepts"
+import Layout from "../layout"
+import SEO from "../seo"
 
 const ProjectsPage = () => {
-  const [selectedProject, setSelectedProject] = useState("dunamis")
+  const [selectedProject, setSelectedProject] = useState("concept")
+
   const onChangeSelectProject = (project: string) => {
     console.log(project)
     setSelectedProject(project)
@@ -17,16 +18,17 @@ const ProjectsPage = () => {
       case "dunamis":
         return <Dunamis />
       case "documentia":
-        return <Ducumentcia />
+        return <Documentcia />
       case "sodexo":
         return <div>sodexo</div>
       case "concept":
-        return <Concept />
+        return <Concepts />
 
       default:
         return <div>Error : Project Not Found</div>
     }
   }
+  console.log("slected", selectedProject)
   return (
     <Layout location={window.location}>
       <SEO title="Projects" />

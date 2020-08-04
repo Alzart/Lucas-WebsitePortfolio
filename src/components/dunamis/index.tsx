@@ -1,156 +1,57 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import styled from "styled-components"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
-interface Props {
-  selectedProject: string
-  onChangeSelectProject: (project: string) => void
-}
-function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
-  const data = useStaticQuery(graphql`
-    query {
-      dunamis: file(relativePath: { eq: "01_Dunamis/Village.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      documencia: file(relativePath: { eq: "02_Documentia/Documentia.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      sodexo: file(relativePath: { eq: "03_Sodexo/FoodSpot.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      concept: file(relativePath: { eq: "04_Concept/Sophie15.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
+function Dunamis() {
   return (
-    <Wrapper>
-      <Item
-        name="dunamis"
-        selectedProject={selectedProject === "dunamis"}
-        onClick={() => onChangeSelectProject("dunamis")}
+    <div style={{ width: "80%", margin: "auto" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        <Img
-          className="image"
-          fluid={data.dunamis.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
-        />
-        <h3>Dunamis</h3>
-        <p>
-          Dunamis is a medical serious game. It aims to help patients to regain
-          muscle force.
+        <svg
+          width="37"
+          height="50"
+          viewBox="0 0 37 24"
+          style={{ cursor: "pointer" }}
+        >
+          <path
+            d="M18.285 24L23.613 18.6882L23.5979 18.6731L37 5.3118L31.6774 -4.33377e-06L18.2466 13.3835L5.31612 0.469549L-2.52712e-07 5.78134L12.9365 18.6731L12.9354 18.6774L18.2645 23.9892L18.2688 23.9849L18.285 24Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+
+      <div style={{ display: "flex", margin: "5vh auto" }}>
+        <p
+          style={{
+            textTransform: "uppercase",
+            margin: "auto",
+            fontFamily: "Raleway",
+            fontSize: "30px",
+            cursor: "pointer",
+            color: "#000",
+          }}
+        >
+          Back To Top
         </p>
-      </Item>
-      <Item
-        name="documencia"
-        selectedProject={selectedProject === "documentia"}
-        onClick={() => onChangeSelectProject("documentia")}
-      >
-        <Img
-          className="image"
-          fluid={data.documencia.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
-        />
-        <h3>Documentia</h3>
-        <p>
-          Documentia is a RPG Narrative game. It have been made in 3 days during
-          the LUDUM DARE 43.
-        </p>
-      </Item>
-      <Item
-        name="sodexo"
-        selectedProject={selectedProject === "sodexo"}
-        onClick={() => onChangeSelectProject("sodexo")}
-      >
-        <Img
-          className="image"
-          fluid={data.sodexo.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
-        />
-        <h3>Sodexo</h3>
-        <p>
-          LeFoodSpot is a brand new service from Sodexo.I had the chance to be
-          part of his conception.
-        </p>
-      </Item>
-      <Item
-        name="concept"
-        selectedProject={selectedProject === "concept"}
-        onClick={() => onChangeSelectProject("concept")}
-      >
-        <Img
-          className="image"
-          fluid={data.concept.childImageSharp.fluid}
-          style={{ width: "100%", height: "100%" }}
-        />
-        <h3>Concept</h3>
-        <p>Here is some personnal and narrative images.</p>
-      </Item>
-    </Wrapper>
+      </div>
+    </div>
   )
 }
-export default ProjectSelector
-const Wrapper = styled.div`
-  display: flex;
-  cursor: pointer;
-  overflow: hidden;
-`
-interface ItemProps {
-  selectedProject: boolean
-  name: string
-}
-const Item = styled.div<ItemProps>`
-  background-color: red;
+export default Dunamis
+
+export const SectionHead = styled.p`
   position: relative;
-  width: ${props => (props.selectedProject ? "70%" : "10%")};
-  height: 70vh;
-  color: #fff;
-  transition: 1s all;
-  p {
-    position: absolute;
-    opacity: ${props => (props.selectedProject ? "1" : "0")};
-    width: 600px;
-    left: 150px;
-    top: 80px;
-    font-family: Manjari;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    transition: 1s all;
-  }
-  h3 {
-    position: absolute;
-    left: -2vw;
-    top: 10vw;
-    z-index: 500;
-    color: ${props => (props.selectedProject ? "#fff" : "#000")};
-    display: inline-block;
-    text-transform: uppercase;
-    font-family: Raleway;
-    font-size: 44px;
-    font-family: Raleway, Impact, Haettenschweiler, "Arial Narrow Bold",
-      sans-serif;
-    transition: 1s all;
-    transform: rotate(-90deg);
-  }
+  width: 190px;
+  left: 130px;
+  padding: 15px;
+  background-color: #000;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
 `

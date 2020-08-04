@@ -17,10 +17,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `concept`,
+        path: `${__dirname}/src/images/2_Projects/04_Concept`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `projects`,
         path: `${__dirname}/src/images/2_Projects`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
