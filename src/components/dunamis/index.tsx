@@ -23,7 +23,7 @@ function Dunamis() {
           />
         </svg>
       </div>
-
+      Dunamis
       <div style={{ display: "flex", margin: "5vh auto" }}>
         <p
           style={{
