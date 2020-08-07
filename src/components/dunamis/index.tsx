@@ -1,5 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import Context from "./Context"
+import Intro from "./Intro"
+import Team from "./Team"
+import Postures from "./Postures"
+import StoryBoard from "./StoryBoard"
+import MiniGames from "./MiniGames"
 
 function Dunamis() {
   return (
@@ -23,7 +29,12 @@ function Dunamis() {
           />
         </svg>
       </div>
-      Dunamis
+      <Context />
+      <Intro />
+      <Team />
+      <Postures />
+      <StoryBoard />
+      <MiniGames />
       <div style={{ display: "flex", margin: "5vh auto" }}>
         <p
           style={{
@@ -54,4 +65,38 @@ export const SectionHead = styled.p`
   font-size: 24px;
   text-align: center;
   color: #ffffff;
+`
+export const SectionSubHead = ({ children }: any) => {
+  return (
+    <SubHead>
+      <svg
+        width="17"
+        height="17"
+        viewBox="0 0 17 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="17" height="17" fill="black" />
+      </svg>
+      <p>{children}</p>
+    </SubHead>
+  )
+}
+const SubHead = styled.p`
+  position: relative;
+  left: 130px;
+  padding: 3vh;
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+  display: flex;
+  svg {
+    margin: auto 0;
+  }
+  p {
+    margin: auto 0;
+    margin-left: 20px;
+  }
 `
