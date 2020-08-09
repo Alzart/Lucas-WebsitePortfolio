@@ -3,8 +3,9 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Carousel from "../components/HomePageCarousel"
+
 const IndexPage = () => (
-  <Layout location={window.location}>
+  <Layout>
     <SEO title="Home" />
 
     <Title>Hi! I'm Lucas</Title>

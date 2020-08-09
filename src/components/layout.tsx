@@ -1,16 +1,16 @@
 import React from "react"
 import Header from "./header"
 import "./layout.css"
+import { globalHistory } from "@reach/router"
 
 interface Props {
-  location: Location
   children?: any
 }
 
-const Layout = ({ location, children }: Props) => {
+const Layout = ({ children }: Props) => {
   return (
     <>
-      <Header selected={location.pathname} />
+      <Header selected={globalHistory.location.pathname} />
       <main>{children}</main>
     </>
   )

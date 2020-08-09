@@ -28,7 +28,7 @@ const ProjectsPage = () => {
     }
   }
   return (
-    <Layout location={window.location}>
+    <Layout>
       <SEO title="Projects" />
       <ProjectSeletor
         selectedProject={selectedProject}
