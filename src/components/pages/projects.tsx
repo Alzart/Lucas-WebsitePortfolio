@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import ProjectSeletor from "../ProjectSelector"
 import Documentcia from "../Documentia"
-import Dunamis from "../Dunamiss"
+import Dunamis from "../Dunamis"
 import Concepts from "../Concepts"
 import Layout from "../layout"
 import SEO from "../seo"
