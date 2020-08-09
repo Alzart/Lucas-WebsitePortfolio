@@ -4,7 +4,7 @@ import Ducumentcia from "../components/Documentia"
 import Concept from "../components/Concepts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Dunamis from "../components/Dunamis"
+import Dunamis from "../components/Dunamiss"
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState("dunamis")

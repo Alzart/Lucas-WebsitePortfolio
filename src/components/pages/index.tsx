@@ -4,7 +4,7 @@ import Layout from "../layout"
 import SEO from "../seo"
 import Carousel from "../HomePageCarousel"
 const IndexPage = () => (
-  <Layout location={window.location}>
+  <Layout>
     <SEO title="Home" />
     <Title>Hi! I'm Lucas</Title>
     <Carousel />

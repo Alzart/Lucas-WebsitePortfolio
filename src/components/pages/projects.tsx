@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import ProjectSeletor from "../ProjectSelector"
 import Documentcia from "../Documentia"
-import Dunamis from "../Dunamis"
+import Dunamis from "../Dunamiss"
 import Concepts from "../Concepts"
 import Layout from "../layout"
 import SEO from "../seo"
@@ -28,9 +28,9 @@ const ProjectsPage = () => {
         return <div>Error : Project Not Found</div>
     }
   }
-  console.log("slected", selectedProject)
+
   return (
-    <Layout location={window.location}>
+    <Layout>
       <SEO title="Projects" />
       <ProjectSeletor
         selectedProject={selectedProject}
