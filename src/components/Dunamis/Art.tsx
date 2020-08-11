@@ -6,7 +6,39 @@ import { SectionHead } from "./index"
 function Context() {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "01_Dunamis/Context/Atlas.jpg" }) {
+      props: file(relativePath: { eq: "01_Dunamis/Concepts/WireFrame20.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      props2: file(
+        relativePath: { eq: "01_Dunamis/Concepts/WireFrame19.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chars: file(relativePath: { eq: "01_Dunamis/Concepts/WireFrame17.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chars2: file(
+        relativePath: { eq: "01_Dunamis/Concepts/WireFrame18.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      chars3: file(relativePath: { eq: "01_Dunamis/Concepts/Charaters.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -21,7 +53,31 @@ function Context() {
       <SectionHead>Art</SectionHead>
       <Wrapper>
         <Img
-          fluid={data.image.childImageSharp.fluid}
+          fluid={data.props.childImageSharp.fluid}
+          style={{
+            width: "100%",
+          }}
+        />
+        <Img
+          fluid={data.chars.childImageSharp.fluid}
+          style={{
+            width: "100%",
+          }}
+        />
+        <Img
+          fluid={data.chars2.childImageSharp.fluid}
+          style={{
+            width: "100%",
+          }}
+        />
+        <Img
+          fluid={data.chars3.childImageSharp.fluid}
+          style={{
+            width: "100%",
+          }}
+        />
+        <Img
+          fluid={data.props2.childImageSharp.fluid}
           style={{
             width: "100%",
           }}
@@ -34,6 +90,7 @@ export default Context
 const Wrapper = styled.div`
   display: flex;
   margin: 5vh auto;
+  width: 80%;
   flex-direction: column;
   color: #000;
 `
