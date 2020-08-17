@@ -7,6 +7,8 @@ import Postures from "./Postures"
 import StoryBoard from "./StoryBoard"
 import MiniGames from "./MiniGames"
 import Art from "./Art"
+import Mockups from "./MockUps"
+
 function Dunamis() {
   return (
     <div style={{ width: "80%", margin: "auto" }}>
@@ -36,7 +38,7 @@ function Dunamis() {
       <StoryBoard />
       <MiniGames />
       <Art />
-      next
+      <Mockups />
       <div style={{ display: "flex", margin: "5vh auto" }}>
         <p
           style={{
