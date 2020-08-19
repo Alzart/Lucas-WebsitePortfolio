@@ -39,6 +39,7 @@ function Dunamis() {
       <MiniGames />
       <Art />
       <Mockups />
+      Next
       <div style={{ display: "flex", margin: "5vh auto" }}>
         <p
           style={{
