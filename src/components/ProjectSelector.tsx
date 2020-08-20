@@ -159,4 +159,10 @@ const Item = styled.div<ItemProps>`
     transition: 1s all;
     transform: rotate(-90deg);
   }
+  :hover {
+    h3 {
+      color: #fff;
+      transition: 0.4s all;
+    }
+  }
 `

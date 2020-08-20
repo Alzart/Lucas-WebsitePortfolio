@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "AHANNELAIS <antoine.hannelais@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@types/react-helmet": "^6.0.0",
     "@types/styled-components": "^5.1.0",
     "babel-plugin-styled-components": "^1.10.7",

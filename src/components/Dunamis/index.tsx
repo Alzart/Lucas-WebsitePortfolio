@@ -10,6 +10,21 @@ import Art from "./Art"
 import Mockups from "./MockUps"
 
 function Dunamis() {
+  const onClickScrollDown = () => {
+    window.scrollTo({
+      top: (window.innerHeight * 75) / 100,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+  const onClickScrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <div style={{ width: "80%", margin: "auto" }}>
       <div
@@ -24,6 +39,7 @@ function Dunamis() {
           height="50"
           viewBox="0 0 37 24"
           style={{ cursor: "pointer" }}
+          onClick={onClickScrollDown}
         >
           <path
             d="M18.285 24L23.613 18.6882L23.5979 18.6731L37 5.3118L31.6774 -4.33377e-06L18.2466 13.3835L5.31612 0.469549L-2.52712e-07 5.78134L12.9365 18.6731L12.9354 18.6774L18.2645 23.9892L18.2688 23.9849L18.285 24Z"
@@ -49,6 +65,7 @@ function Dunamis() {
             cursor: "pointer",
             color: "#000",
           }}
+          onClick={onClickScrollUp}
         >
           Back To Top
         </p>
@@ -58,7 +75,7 @@ function Dunamis() {
 }
 export default Dunamis
 
-export const SectionHead = styled.p`
+export const SectionHead = styled.div`
   position: relative;
   width: 190px;
   left: 130px;

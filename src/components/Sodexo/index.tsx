@@ -7,6 +7,21 @@ import UserScenario from "./UserScenario"
 import Concepts from "./Concepts"
 
 function Sodexo() {
+  const onClickScrollDown = () => {
+    window.scrollTo({
+      top: (window.innerHeight * 75) / 100,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+  const onClickScrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <div style={{ width: "80%", margin: "auto" }}>
       <div
@@ -17,6 +32,7 @@ function Sodexo() {
         }}
       >
         <svg
+          onClick={onClickScrollDown}
           width="37"
           height="50"
           viewBox="0 0 37 24"
@@ -43,6 +59,7 @@ function Sodexo() {
             cursor: "pointer",
             color: "#000",
           }}
+          onClick={onClickScrollUp}
         >
           Back To Top
         </p>
@@ -80,7 +97,7 @@ export const SectionSubHead = ({ children }: any) => {
     </SubHead>
   )
 }
-const SubHead = styled.p`
+const SubHead = styled.div`
   position: relative;
   left: 130px;
   padding: 3vh;
