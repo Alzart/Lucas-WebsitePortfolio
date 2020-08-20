@@ -23,7 +23,7 @@ function Concepts() {
           }
         }
       }
-      maya: file(relativePath: { eq: "03_Sodexo/Design/3D/Test06.png" }) {
+      maya: file(relativePath: { eq: "03_Sodexo/Design/3D/Maya.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
