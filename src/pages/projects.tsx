@@ -5,9 +5,10 @@ import Concept from "../components/Concepts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Dunamis from "../components/Dunamis"
+import Sodexo from "../components/Sodexo"
 
 const ProjectsPage = () => {
-  const [selectedProject, setSelectedProject] = useState("dunamis")
+  const [selectedProject, setSelectedProject] = useState("sodexo")
   const onChangeSelectProject = (project: string) => {
     console.log(project)
     setSelectedProject(project)
@@ -19,7 +20,7 @@ const ProjectsPage = () => {
       case "documentia":
         return <Ducumentcia />
       case "sodexo":
-        return <div>sodexo</div>
+        return <Sodexo />
       case "concept":
         return <Concept />
 

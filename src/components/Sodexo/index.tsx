@@ -1,15 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import Context from "./Context"
-import Intro from "./Intro"
-import Team from "./Team"
-import Postures from "./Postures"
-import StoryBoard from "./StoryBoard"
-import MiniGames from "./MiniGames"
-import Art from "./Art"
-import Mockups from "./MockUps"
+import Collaboration from "./Collaboration"
+import Design from "./Design"
+import UserScenario from "./UserScenario"
+import Concepts from "./Concepts"
 
-function Dunamis() {
+function Sodexo() {
   return (
     <div style={{ width: "80%", margin: "auto" }}>
       <div
@@ -32,13 +29,10 @@ function Dunamis() {
         </svg>
       </div>
       <Context />
-      <Intro />
-      <Team />
-      <Postures />
-      <StoryBoard />
-      <MiniGames />
-      <Art />
-      <Mockups />
+      <Collaboration />
+      <Design />
+      <UserScenario />
+      <Concepts />
       <div style={{ display: "flex", margin: "5vh auto" }}>
         <p
           style={{
@@ -56,7 +50,7 @@ function Dunamis() {
     </div>
   )
 }
-export default Dunamis
+export default Sodexo
 
 export const SectionHead = styled.p`
   position: relative;
