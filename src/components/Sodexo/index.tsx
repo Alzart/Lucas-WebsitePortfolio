@@ -7,19 +7,24 @@ import UserScenario from "./UserScenario"
 import Concepts from "./Concepts"
 
 function Sodexo() {
+  const isBrowser = typeof window !== "undefined"
   const onClickScrollDown = () => {
-    window.scrollTo({
-      top: (window.innerHeight * 75) / 100,
-      left: 0,
-      behavior: "smooth",
-    })
+    if (isBrowser) {
+      window.scrollTo({
+        top: (window.innerHeight * 75) / 100,
+        left: 0,
+        behavior: "smooth",
+      })
+    }
   }
   const onClickScrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    })
+    if (isBrowser) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      })
+    }
   }
 
   return (
