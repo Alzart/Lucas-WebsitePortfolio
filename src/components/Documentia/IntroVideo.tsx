@@ -8,7 +8,7 @@ function IntroVideo() {
         className="embededvideo"
         title="youtube player"
         src="https://www.youtube.com/embed/WLZX8gPBHpc"
-        style={{ width: "900px", height: "500px" }}
+        style={{ width: "70vw", height: "40vw" }}
       />
       <br />
       <p>

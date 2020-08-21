@@ -80,7 +80,7 @@ export default Documentia
 export const SectionHead = styled.p`
   position: relative;
   width: 190px;
-  left: 130px;
+  left: 5vw;
   padding: 15px;
   background-color: #000;
   text-transform: uppercase;

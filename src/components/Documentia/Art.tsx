@@ -49,8 +49,7 @@ function Art() {
         <Img
           fluid={data.props.childImageSharp.fluid}
           style={{
-            width: "1050px",
-            height: "560px",
+            width: "100%",
             margin: "auto",
           }}
         />

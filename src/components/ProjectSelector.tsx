@@ -146,9 +146,9 @@ const Item = styled.div<ItemProps>`
   }
   h3 {
     position: absolute;
-    left: -2vw;
-    top: 10vw;
     z-index: 500;
+    top: 50%;
+    left: 10px;
     color: ${props => (props.selectedProject ? "#fff" : "#000")};
     display: inline-block;
     text-transform: uppercase;
@@ -157,7 +157,7 @@ const Item = styled.div<ItemProps>`
     font-family: Raleway, Impact, Haettenschweiler, "Arial Narrow Bold",
       sans-serif;
     transition: 1s all;
-    transform: rotate(-90deg);
+    transform: translate(calc(22px + -50%), 0) rotate(-90deg);
   }
   :hover {
     h3 {
@@ -166,3 +166,4 @@ const Item = styled.div<ItemProps>`
     }
   }
 `
+// transform: translate(calc(22px + -50%), 0%) rotate(-90deg);

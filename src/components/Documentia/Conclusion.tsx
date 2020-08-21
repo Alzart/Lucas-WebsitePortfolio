@@ -28,24 +28,6 @@ function Conclusion() {
           }
         }
       }
-      emptyField: file(
-        relativePath: { eq: "02_Documentia/Process/emptyField.png" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      farmer: file(
-        relativePath: { eq: "02_Documentia/Intro/DocumentiaBrand_hide.png" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -65,7 +47,7 @@ function Conclusion() {
             className="embededvideo"
             title="youtube player"
             src="https://www.youtube.com/embed/AQkN61dqjeY?start=8049"
-            style={{ width: "900px", height: "500px" }}
+            style={{ width: "70vw", height: "40vw" }}
           />
         </div>
         <p>The game have been played more than 400 times.</p>

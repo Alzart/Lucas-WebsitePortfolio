@@ -35,8 +35,7 @@ function Vision() {
         <Img
           fluid={data.kill.childImageSharp.fluid}
           style={{
-            width: "1200px",
-            height: "450px",
+            width: "100%",
             margin: "auto",
           }}
         />
@@ -46,8 +45,7 @@ function Vision() {
         <Img
           fluid={data.regret.childImageSharp.fluid}
           style={{
-            width: "1200px",
-            height: "450px",
+            width: "100%",
             margin: "auto",
           }}
         />

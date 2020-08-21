@@ -7,8 +7,17 @@ import { SectionHead, SectionSubHead } from "./index"
 function Context() {
   const data = useStaticQuery(graphql`
     query {
-      image: file(
+      cuisine: file(
         relativePath: { eq: "03_Sodexo/Context/passion-cuisine.jpg" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logos: file(
+        relativePath: { eq: "03_Sodexo/Context/Logo-concurrents.jpg" }
       ) {
         childImageSharp {
           fluid {
@@ -32,7 +41,7 @@ function Context() {
         </p>
         <br />
         <Img
-          fluid={data.image.childImageSharp.fluid}
+          fluid={data.cuisine.childImageSharp.fluid}
           style={{ width: "100%" }}
         />
         <br />
@@ -41,7 +50,10 @@ function Context() {
           becomes old since new actors are investing the market...
         </p>
         <br />
-        Logos
+        <Img
+          fluid={data.logos.childImageSharp.fluid}
+          style={{ width: "80%", margin: "auto" }}
+        />
         <br />
         <p>That’s the reason why Sodexo will soon launch ‘LeFoodSpot’</p>
       </Wrapper>

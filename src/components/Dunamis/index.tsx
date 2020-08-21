@@ -82,7 +82,7 @@ export default Dunamis
 export const SectionHead = styled.div`
   position: relative;
   width: 190px;
-  left: 130px;
+  left: 5vw;
   padding: 15px;
   background-color: #000;
   text-transform: uppercase;
@@ -109,7 +109,7 @@ export const SectionSubHead = ({ children }: any) => {
 }
 const SubHead = styled.p`
   position: relative;
-  left: 130px;
+  left: 5vw;
   padding: 3vh;
   text-transform: uppercase;
   font-family: Raleway;

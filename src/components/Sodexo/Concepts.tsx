@@ -49,25 +49,29 @@ function Concepts() {
         <Img
           fluid={data.sketches.childImageSharp.fluid}
           style={{
-            width: "100%",
+            width: "80%",
             margin: "auto",
           }}
         />
         <Img
           fluid={data.ameublement.childImageSharp.fluid}
           style={{
-            width: "100%",
+            width: "80%",
             margin: "auto",
           }}
         />
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <br />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <Item>
             <Img
               fluid={data.maya.childImageSharp.fluid}
               style={{
-                width: "600px",
-                height: "400px",
-                margin: "auto",
+                width: "25vw",
               }}
             />
             <br />
@@ -77,9 +81,7 @@ function Concepts() {
             <Img
               fluid={data.blender.childImageSharp.fluid}
               style={{
-                width: "600px",
-                height: "400px",
-                margin: "auto",
+                width: "25vw",
               }}
             />
             <br />

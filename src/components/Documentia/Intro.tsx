@@ -42,6 +42,7 @@ const Wrapper = styled.div`
   margin: 5vh auto;
   p {
     margin: auto;
+    padding-left: 20px;
     width: 362px;
     font-family: Manjari;
     font-size: 24px;
