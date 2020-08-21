@@ -6,6 +6,10 @@
   font-family: Manjari;
   src: url("../fonts/Manjari/Manjari-Bold.ttf");
 }
+@font-face {
+  font-family: Manjari;
+  src: url("../fonts/Manjari/Manjari-Bold.ttf");
+}
 
 html {
   font-family: sans-serif;

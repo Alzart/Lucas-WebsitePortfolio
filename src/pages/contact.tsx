@@ -52,7 +52,7 @@ const ProjectsPage = () => {
           position: "relative",
           top: "10vh",
           left: "10%",
-          width: "600px",
+          width: "30%",
         }}
       />
     </Layout>
@@ -66,6 +66,7 @@ const Wrapper = styled.div`
   right: 10%;
   top: 30%;
   display: flex;
+  max-width: 50%;
   flex-direction: column;
   h5 {
     display: inline-block;
