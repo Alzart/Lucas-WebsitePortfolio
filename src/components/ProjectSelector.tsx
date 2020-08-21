@@ -12,28 +12,28 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
     query {
       dunamis: file(relativePath: { eq: "01_Dunamis/Village.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       documencia: file(relativePath: { eq: "02_Documentia/Documentia.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       sodexo: file(relativePath: { eq: "03_Sodexo/FoodSpot.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       concept: file(relativePath: { eq: "Sophie15.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -166,4 +166,3 @@ const Item = styled.div<ItemProps>`
     }
   }
 `
-// transform: translate(calc(22px + -50%), 0%) rotate(-90deg);

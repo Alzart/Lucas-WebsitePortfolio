@@ -8,9 +8,8 @@ import Dunamis from "../components/Dunamis"
 import Sodexo from "../components/Sodexo"
 
 const ProjectsPage = () => {
-  const [selectedProject, setSelectedProject] = useState("sodexo")
+  const [selectedProject, setSelectedProject] = useState("dunamis")
   const onChangeSelectProject = (project: string) => {
-    console.log(project)
     setSelectedProject(project)
   }
   const displaySelectedProject = () => {
