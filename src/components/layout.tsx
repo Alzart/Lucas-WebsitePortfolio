@@ -8,6 +8,7 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
+  console.log(globalHistory.location.pathname)
   return (
     <>
       <Header selected={globalHistory.location.pathname} />

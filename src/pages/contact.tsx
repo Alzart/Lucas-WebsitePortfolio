@@ -56,7 +56,16 @@ const ProjectsPage = () => {
         }}
       />
       <Footer>
-        <span> Built by Antoine Hannelais</span>
+        <span>
+          Built by{" "}
+          <a
+            href="https://www.linkedin.com/in/antoine-hannelais/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Antoine Hannelais
+          </a>
+        </span>
         <span> Designed by Lucas De Pinho</span>
       </Footer>
     </Layout>
@@ -113,10 +122,19 @@ const Wrapper = styled.div`
 const Footer = styled.p`
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   font-family: Manjari;
   font-size: 18px;
+  color: #787878;
   span {
     margin: 20px;
+  }
+  a {
+    color: #787878;
+    text-decoration: none;
+    transition: 0.3s all;
+    :hover {
+      text-decoration: underline;
+    }
   }
 `
