@@ -11,7 +11,7 @@ function Design() {
         relativePath: { eq: "03_Sodexo/Graphic Design/Roundy_FS.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -20,7 +20,7 @@ function Design() {
         relativePath: { eq: "03_Sodexo/Graphic Design/Streety_LFS.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

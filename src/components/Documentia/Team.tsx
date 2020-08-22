@@ -9,21 +9,21 @@ function Team() {
     query {
       lucas: file(relativePath: { eq: "02_Documentia/Team/Luka.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       leo: file(relativePath: { eq: "02_Documentia/Team/Leo.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       corentin: file(relativePath: { eq: "02_Documentia/Team/Coco.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

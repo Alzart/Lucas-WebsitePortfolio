@@ -8,14 +8,8 @@ export interface Props {
 const Header = ({ selected }: Props) => (
   <Wrapper>
     <Category
-      selected={selected === "/" ? true : false}
-      onClick={() => navigate("/")}
-    >
-      <p>Home</p>
-    </Category>
-    <Category
       selected={selected === "/projects" ? true : false}
-      onClick={() => navigate("/projects")}
+      onClick={() => navigate("/")}
     >
       <p>Projects</p>
     </Category>

@@ -8,7 +8,7 @@ function Context() {
     query {
       props: file(relativePath: { eq: "01_Dunamis/Concepts/WireFrame20.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -17,7 +17,7 @@ function Context() {
         relativePath: { eq: "01_Dunamis/Concepts/WireFrame19.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

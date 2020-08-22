@@ -9,7 +9,7 @@ function StoryBoard() {
     query {
       panel: file(relativePath: { eq: "01_Dunamis/StoryBoard/panel.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

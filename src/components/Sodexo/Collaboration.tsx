@@ -11,7 +11,7 @@ function Collaboration() {
         relativePath: { eq: "03_Sodexo/Collaboration/AllFrigos.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

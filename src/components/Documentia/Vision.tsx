@@ -9,7 +9,7 @@ function Vision() {
     query {
       kill: file(relativePath: { eq: "02_Documentia/Vision/Kill.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,7 +18,7 @@ function Vision() {
         relativePath: { eq: "02_Documentia/Vision/WhatHaveIDone.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

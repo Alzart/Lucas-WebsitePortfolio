@@ -9,21 +9,21 @@ function Postures() {
     query {
       one: file(relativePath: { eq: "01_Dunamis/postures/Postures_01.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       two: file(relativePath: { eq: "01_Dunamis/postures/Postures_02.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       three: file(relativePath: { eq: "01_Dunamis/postures/Postures_03.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

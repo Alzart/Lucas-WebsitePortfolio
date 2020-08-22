@@ -9,7 +9,7 @@ function Concepts() {
     query {
       sketches: file(relativePath: { eq: "03_Sodexo/Design/Sketches.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,14 +18,14 @@ function Concepts() {
         relativePath: { eq: "03_Sodexo/Design/Ameublement.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       maya: file(relativePath: { eq: "03_Sodexo/Design/3D/Maya.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -34,7 +34,7 @@ function Concepts() {
         relativePath: { eq: "03_Sodexo/Design/3D/Render+Exterior_04.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

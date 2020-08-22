@@ -11,7 +11,7 @@ function Context() {
         relativePath: { eq: "03_Sodexo/Context/passion-cuisine.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -20,7 +20,7 @@ function Context() {
         relativePath: { eq: "03_Sodexo/Context/Logo-concurrents.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

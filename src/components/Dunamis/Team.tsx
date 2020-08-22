@@ -9,21 +9,21 @@ function Team() {
     query {
       amelie: file(relativePath: { eq: "01_Dunamis/Team/Amélie.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       hugues: file(relativePath: { eq: "01_Dunamis/Team/Hugues.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       lucas: file(relativePath: { eq: "01_Dunamis/Team/Lucas.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

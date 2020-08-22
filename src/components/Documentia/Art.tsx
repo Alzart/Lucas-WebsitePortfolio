@@ -11,14 +11,14 @@ function Art() {
         relativePath: { eq: "02_Documentia/Process/SketchDocumentia.PNG" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       props: file(relativePath: { eq: "02_Documentia/Process/all_props.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -9,49 +9,49 @@ function Team() {
     query {
       post1: file(relativePath: { eq: "01_Dunamis/postures/Postures_01.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       post2: file(relativePath: { eq: "01_Dunamis/postures/Postures_02.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       post3: file(relativePath: { eq: "01_Dunamis/postures/Postures_03.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       game1: file(relativePath: { eq: "01_Dunamis/GD/Mini_Games_01.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       game2: file(relativePath: { eq: "01_Dunamis/GD/Mini_Games_02.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       game3: file(relativePath: { eq: "01_Dunamis/GD/Mini_Games_03.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       game4: file(relativePath: { eq: "01_Dunamis/GD/Mini_Games_04.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

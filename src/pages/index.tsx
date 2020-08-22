@@ -1,33 +1,42 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useState } from "react"
+import ProjectSeletor from "../components/ProjectSelector"
+import Ducumentcia from "../components/Documentia"
+import Concept from "../components/Concepts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Carousel from "../components/HomePageCarousel"
+import Dunamis from "../components/Dunamis"
+import Sodexo from "../components/Sodexo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+const ProjectsPage = () => {
+  const [selectedProject, setSelectedProject] = useState("dunamis")
+  const onChangeSelectProject = (project: string) => {
+    setSelectedProject(project)
+  }
+  const displaySelectedProject = () => {
+    switch (selectedProject) {
+      case "dunamis":
+        return <Dunamis />
+      case "documentia":
+        return <Ducumentcia />
+      case "sodexo":
+        return <Sodexo />
+      case "concept":
+        return <Concept />
 
-    <Title>Hi! I'm Lucas</Title>
-    <Carousel />
-  </Layout>
-)
+      default:
+        return <div>Error : Project Not Found</div>
+    }
+  }
+  return (
+    <Layout>
+      <SEO title="Projects" />
+      <ProjectSeletor
+        selectedProject={selectedProject}
+        onChangeSelectProject={onChangeSelectProject}
+      />
+      {displaySelectedProject()}
+    </Layout>
+  )
+}
 
-export default IndexPage
-
-const Title = styled.div`
-  position: absolute;
-  z-index: 500;
-  width: 736px;
-  height: 149px;
-  left: 164px;
-  top: 243px;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 64px;
-  line-height: 75px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-`
+export default ProjectsPage

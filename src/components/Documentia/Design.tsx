@@ -11,21 +11,21 @@ function Design() {
         relativePath: { eq: "02_Documentia/Process/fullField.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       delete: file(relativePath: { eq: "02_Documentia/Process/Delete.JPG" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       files: file(relativePath: { eq: "02_Documentia/Process/Folder.JPG" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -34,7 +34,7 @@ function Design() {
         relativePath: { eq: "02_Documentia/Process/emptyField.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -43,7 +43,7 @@ function Design() {
         relativePath: { eq: "02_Documentia/Intro/DocumentiaBrand_hide.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

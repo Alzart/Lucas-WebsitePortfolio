@@ -8,6 +8,7 @@ import StoryBoard from "./StoryBoard"
 import MiniGames from "./MiniGames"
 import Art from "./Art"
 import Mockups from "./MockUps"
+import Video from "./Video"
 
 function Dunamis() {
   const isBrowser = typeof window !== "undefined"
@@ -53,6 +54,7 @@ function Dunamis() {
       </div>
       <Context />
       <Intro />
+      <Video />
       <Team />
       <Postures />
       <StoryBoard />

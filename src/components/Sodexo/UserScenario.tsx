@@ -11,14 +11,14 @@ function UserScenario() {
         relativePath: { eq: "03_Sodexo/Design/StoryBoard.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       schema: file(relativePath: { eq: "03_Sodexo/Design/Frigal_NU22.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

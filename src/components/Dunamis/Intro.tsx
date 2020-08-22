@@ -9,14 +9,14 @@ function Intro() {
     query {
       belt: file(relativePath: { eq: "01_Dunamis/Context/Atlas_Belt.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       tablet: file(relativePath: { eq: "01_Dunamis/Context/Tablette.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

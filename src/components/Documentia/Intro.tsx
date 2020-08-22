@@ -10,7 +10,7 @@ function Intro() {
         relativePath: { eq: "02_Documentia/Intro/DocumentiaBrand_hide.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

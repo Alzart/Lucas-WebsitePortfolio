@@ -3,8 +3,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { SectionSubHead } from "./index"
-//@ts-ignore
-import Video from "../../images/2_Projects/01_Dunamis/Maquettes/Mock_Up_v05.mp4"
 
 function Context() {
   const data = useStaticQuery(graphql`
@@ -13,7 +11,7 @@ function Context() {
         relativePath: { eq: "01_Dunamis/Maquettes/Fun_02_Enviro.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,21 +20,21 @@ function Context() {
         relativePath: { eq: "01_Dunamis/Maquettes/lvl_01_early.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       props2: file(relativePath: { eq: "01_Dunamis/Maquettes/Style_02.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       props3: file(relativePath: { eq: "01_Dunamis/Maquettes/Geometric.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -45,7 +43,7 @@ function Context() {
         relativePath: { eq: "01_Dunamis/Maquettes/Foret_Gentille_V01.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -54,7 +52,7 @@ function Context() {
         relativePath: { eq: "01_Dunamis/Maquettes/StyleLucas.png" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -72,7 +70,6 @@ function Context() {
             width: "100%",
           }}
         />
-        <video controls src={Video} />
         <div style={{ display: "flex" }}>
           <Img
             fluid={data.props.childImageSharp.fluid}

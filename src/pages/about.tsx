@@ -143,7 +143,7 @@ const AuboutPage = () => {
           </div>
           <SectionHead>Skill</SectionHead>
           <div>
-            <ul style={{ listStyleType: "none" }}>
+            <ul style={{ listStyleType: "none", lineHeight: "15px" }}>
               <li>
                 <b>Core</b>
               </li>
@@ -163,7 +163,7 @@ const AuboutPage = () => {
                 <p>Sketch</p>
               </li>
             </ul>
-            <ul style={{ listStyleType: "none" }}>
+            <ul style={{ listStyleType: "none", lineHeight: "15px" }}>
               <li>
                 <b>Tools</b>
               </li>
@@ -186,7 +186,7 @@ const AuboutPage = () => {
                 <p>Blender</p>
               </li>
             </ul>
-            <ul style={{ listStyleType: "none" }}>
+            <ul style={{ listStyleType: "none", lineHeight: "15px" }}>
               <li>
                 <b>Languages</b>
               </li>
@@ -241,16 +241,19 @@ const Frame = styled.div`
 `
 const Item = styled.div`
   max-width: 50%;
-  margin: auto;
+  margin: 0 auto;
   div {
     b {
-      font-family: Raleway;
+      color: #000;
+    }
+    p {
+      color: #787878;
     }
     display: flex;
     font-family: Manjari;
   }
   h5 {
-    font-family: Raleway;
+    font-family: Renogare, sans-serif;
     font-size: 18px;
     line-height: 21px;
     align-items: center;

@@ -90,7 +90,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         />
         <h3>Sodexo</h3>
         <p>
-          LeFoodSpot is a brand new service from Sodexo.I had the chance to be
+          LeFoodSpot is a brand new service from Sodexo. I had the chance to be
           part of his conception.
         </p>
       </Item>

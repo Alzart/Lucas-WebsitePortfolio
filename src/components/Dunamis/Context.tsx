@@ -8,7 +8,7 @@ function Context() {
     query {
       image: file(relativePath: { eq: "01_Dunamis/Context/Atlas.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -2,7 +2,7 @@
   "name": "lucas-website",
   "private": true,
   "description": "Lucas De Pinho artist website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "AHANNELAIS <antoine.hannelais@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",

@@ -1,28 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 
-function IntroVideo() {
+function Video() {
   return (
     <Wrapper>
       <iframe
         className="embededvideo"
         title="youtube player"
-        src="https://www.youtube.com/embed/WLZX8gPBHpc"
+        src="https://www.youtube.com/embed/VAys2uJ5znQ"
         style={{ width: "70vw", height: "40vw" }}
       />
-      <br />
-      <p>
-        You can play the game for free{" "}
-        <span
-          onClick={() => window.open("https://pandanym.itch.io/documentia")}
-        >
-          here
-        </span>
-      </p>
     </Wrapper>
   )
 }
-export default IntroVideo
+export default Video
 const Wrapper = styled.div`
   align-items: center;
   display: flex;
@@ -33,14 +24,12 @@ const Wrapper = styled.div`
     font-family: Manjari;
     font-size: 24px;
     color: #000;
-    height: 60px;
     span {
       color: #000000;
-      text-decoration: underline;
-      transition: 0.3s all;
+      text-decoration: none;
       cursor: pointer;
       :hover {
-        font-size: 28px;
+        text-decoration: underline;
       }
     }
   }

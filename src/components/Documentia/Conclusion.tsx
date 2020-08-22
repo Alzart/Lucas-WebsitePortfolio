@@ -9,21 +9,21 @@ function Conclusion() {
     query {
       awards: file(relativePath: { eq: "02_Documentia/End/Awards.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       ludum: file(relativePath: { eq: "02_Documentia/End/Ludum.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       tent: file(relativePath: { eq: "02_Documentia/End/Tent.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
