@@ -24,7 +24,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
           }
         }
       }
-      sodexo: file(relativePath: { eq: "03_Sodexo/FoodSpot.png" }) {
+      sodexo: file(relativePath: { eq: "03_Sodexo/Acceuil.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -85,7 +85,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
         <Img
           className="image"
           fluid={data.sodexo.childImageSharp.fluid}
-          imgStyle={{ objectPosition: "40% 50%" }}
+          imgStyle={{ objectPosition: "22% 50%" }}
           style={{ width: "100%", height: "100%" }}
         />
         <h3>Sodexo</h3>

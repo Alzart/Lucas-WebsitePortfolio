@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Context from "./Context"
-import Collaboration from "./Collaboration"
 import Design from "./Design"
 import UserScenario from "./UserScenario"
 import Concepts from "./Concepts"
+import Video from "./Video"
 
 function Sodexo() {
   const isBrowser = typeof window !== "undefined"
@@ -29,13 +29,7 @@ function Sodexo() {
 
   return (
     <div style={{ width: "80%", margin: "auto" }}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <GoDown>
         <svg
           onClick={onClickScrollDown}
           width="37"
@@ -48,27 +42,15 @@ function Sodexo() {
             fill="black"
           />
         </svg>
-      </div>
+      </GoDown>
       <Context />
-      <Collaboration />
+      <Video />
       <Design />
       <UserScenario />
       <Concepts />
-      <div style={{ display: "flex", margin: "5vh auto" }}>
-        <p
-          style={{
-            textTransform: "uppercase",
-            margin: "auto",
-            fontFamily: "Raleway",
-            fontSize: "30px",
-            cursor: "pointer",
-            color: "#000",
-          }}
-          onClick={onClickScrollUp}
-        >
-          Back To Top
-        </p>
-      </div>
+      <BackToTop>
+        <p onClick={onClickScrollUp}>Back To Top</p>
+      </BackToTop>
     </div>
   )
 }
@@ -118,5 +100,34 @@ const SubHead = styled.div`
   p {
     margin: auto 0;
     margin-left: 20px;
+  }
+`
+
+const BackToTop = styled.div`
+  display: flex;
+  margin: 5vh auto;
+  p {
+    text-transform: uppercase;
+    margin: auto;
+    font-family: Raleway;
+    font-size: 30px;
+    transition: 0.3s all;
+    cursor: pointer;
+    color: #000;
+    :hover {
+      font-size: 40px;
+    }
+  }
+`
+const GoDown = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: 0.3s all;
+    :hover {
+      transform: scale(1.5);
+    }
   }
 `

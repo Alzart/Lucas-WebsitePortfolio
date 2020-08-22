@@ -2,23 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import { SectionHead, SectionSubHead } from "./index"
-
+import { SectionHead } from "./index"
 function Context() {
   const data = useStaticQuery(graphql`
     query {
-      cuisine: file(
-        relativePath: { eq: "03_Sodexo/Context/passion-cuisine.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      logos: file(
-        relativePath: { eq: "03_Sodexo/Context/Logo-concurrents.jpg" }
-      ) {
+      image: file(relativePath: { eq: "03_Sodexo/Context/MeS_Middle.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -31,45 +19,45 @@ function Context() {
   return (
     <>
       <SectionHead>Context</SectionHead>
-      <SectionSubHead>Sodexo in Few Words</SectionSubHead>
       <Wrapper>
-        <p>
-          Sodexo is a french multinational company focusing on services.
-          There’re well known for delivering on site restauration services like
-          at schools, hospital and corporations. Their activity is even wider
-          with facility management and mobility and expenses managment.
-        </p>
-        <br />
         <Img
-          fluid={data.cuisine.childImageSharp.fluid}
-          style={{ width: "100%" }}
+          fluid={data.image.childImageSharp.fluid}
+          style={{
+            width: "100%",
+          }}
         />
-        <br />
-        <p>
-          But this way of deliver food by building an entire kitchen on the site
-          becomes old since new actors are investing the market...
-        </p>
-        <br />
-        <Img
-          fluid={data.logos.childImageSharp.fluid}
-          style={{ width: "80%", margin: "auto" }}
-        />
-        <br />
-        <p>That’s the reason why Sodexo will soon launch ‘LeFoodSpot’</p>
+        <h3>Eating at Work</h3>
+        <p>An hand-made meal to your collaborators.</p>
       </Wrapper>
     </>
   )
 }
 export default Context
 const Wrapper = styled.div`
+  display: flex;
   margin: 5vh auto;
   position: relative;
-  color: #000;
+  color: #fff;
+  h3 {
+    position: absolute;
+    left: 5%;
+    top: 100px;
+    width: 30%;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-size: 64px;
+    span {
+      font-size: 24px;
+    }
+  }
   p {
+    position: absolute;
     margin: auto;
-    text-align: center;
+    width: 362px;
+    height: 142px;
+    left: 5%;
+    top: 300px;
     font-family: Manjari;
-    width: 80%;
     font-size: 24px;
     line-height: 28px;
   }

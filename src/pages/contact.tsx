@@ -21,7 +21,6 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-
       <Wrapper>
         <h5>Let's bring life to your stories.</h5>
         <br />
@@ -53,8 +52,13 @@ const ProjectsPage = () => {
           top: "10vh",
           left: "10%",
           width: "30%",
+          transform: "scaleX(-1)",
         }}
       />
+      <Footer>
+        <span> Built by Antoine Hannelais</span>
+        <span> Designed by Lucas De Pinho</span>
+      </Footer>
     </Layout>
   )
 }
@@ -104,5 +108,15 @@ const Wrapper = styled.div`
       background: #000;
       border-color: #fff !important;
     }
+  }
+`
+const Footer = styled.p`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: Manjari;
+  font-size: 18px;
+  span {
+    margin: 20px;
   }
 `

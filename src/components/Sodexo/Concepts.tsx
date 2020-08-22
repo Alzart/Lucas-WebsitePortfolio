@@ -23,15 +23,56 @@ function Concepts() {
           }
         }
       }
-      maya: file(relativePath: { eq: "03_Sodexo/Design/3D/Maya.png" }) {
+      test1: file(relativePath: { eq: "03_Sodexo/Design/Test_II_b.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      blender: file(
-        relativePath: { eq: "03_Sodexo/Design/3D/Render+Exterior_04.png" }
+      test2: file(relativePath: { eq: "03_Sodexo/Design/Test_III.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      test3: file(relativePath: { eq: "03_Sodexo/Design/Test_X.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      all: file(
+        relativePath: { eq: "03_Sodexo/Design/3D/AllPropositions.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blender1: file(
+        relativePath: { eq: "03_Sodexo/Design/3D/Render+Exterior_02.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blender2: file(
+        relativePath: { eq: "03_Sodexo/Design/3D/Render+Exterior_02.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blender3: file(
+        relativePath: { eq: "03_Sodexo/Design/3D/Frigo_COLORS2.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 2000) {
@@ -60,34 +101,60 @@ function Concepts() {
             margin: "auto",
           }}
         />
-        <br />
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <Item>
-            <Img
-              fluid={data.maya.childImageSharp.fluid}
-              style={{
-                width: "25vw",
-              }}
-            />
-            <br />
-            <p>Maya</p>
-          </Item>
-          <Item>
-            <Img
-              fluid={data.blender.childImageSharp.fluid}
-              style={{
-                width: "25vw",
-              }}
-            />
-            <br />
-            <p>Blender</p>
-          </Item>
+        <div style={{ display: "flex" }}>
+          <Img
+            fluid={data.test1.childImageSharp.fluid}
+            style={{
+              width: "32.3%",
+              margin: "1%",
+            }}
+          />
+          <Img
+            fluid={data.test2.childImageSharp.fluid}
+            style={{
+              width: "32.3%",
+              margin: "1%",
+            }}
+          />
+          <Img
+            fluid={data.test3.childImageSharp.fluid}
+            style={{
+              width: "32.3%",
+              margin: "1%",
+            }}
+          />
         </div>
+        <Img
+          fluid={data.all.childImageSharp.fluid}
+          style={{
+            width: "100%",
+            margin: "2vh auto",
+          }}
+        />
+        <br />
+        <p>Blender 2.8 // Cycles</p>
+        <br />
+        <Img
+          fluid={data.blender1.childImageSharp.fluid}
+          style={{
+            width: "100%",
+            margin: "2vh auto",
+          }}
+        />
+        <Img
+          fluid={data.blender2.childImageSharp.fluid}
+          style={{
+            width: "100%",
+            margin: "2vh auto",
+          }}
+        />
+        <Img
+          fluid={data.blender3.childImageSharp.fluid}
+          style={{
+            width: "100%",
+            margin: "2vh auto",
+          }}
+        />
       </Wrapper>
     </>
   )
