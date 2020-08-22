@@ -91,7 +91,7 @@ export const SectionSubHead = ({ children }: any) => {
     </SubHead>
   )
 }
-const SubHead = styled.p`
+const SubHead = styled.div`
   position: relative;
   left: 5vw;
   padding: 3vh;

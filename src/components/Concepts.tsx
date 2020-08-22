@@ -28,9 +28,20 @@ function Concepts() {
       }
     }
   `)
-  const images = data.images.edges.map((image: any) => {
-    return image.node.childImageSharp.fluid
-  })
+  const images = data.images.edges
+    .sort((a: any, b: any) => {
+      console.log(a.node.relativePath)
+      const nameA = a.node.relativePath.toUpperCase()
+      const nameB = b.node.relativePath.toUpperCase()
+      if (nameA < nameB) return -1
+      if (nameA > nameB) return 1
+      return 0
+    })
+    .map((image: any) => {
+      return image.node.childImageSharp.fluid
+    })
+
+  console.log(images)
   return (
     <div style={{ width: "80%", margin: "5vh auto" }}>
       <Carousel {...settings}>
