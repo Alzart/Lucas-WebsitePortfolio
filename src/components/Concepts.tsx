@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const settings = {
   autoPlay: true,
   infiniteLoop: true,
-  interval: 5000,
+  interval: 3000,
   showThumbs: false,
 }
 
@@ -31,7 +31,6 @@ function Concepts() {
   const images = data.images.edges.map((image: any) => {
     return image.node.childImageSharp.fluid
   })
-  console.log("image", images)
   return (
     <div style={{ width: "80%", margin: "5vh auto" }}>
       <Carousel {...settings}>

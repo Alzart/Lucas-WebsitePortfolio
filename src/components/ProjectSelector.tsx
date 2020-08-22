@@ -31,7 +31,7 @@ function ProjectSelector({ selectedProject, onChangeSelectProject }: Props) {
           }
         }
       }
-      concept: file(relativePath: { eq: "Sophie15.jpg" }) {
+      concept: file(relativePath: { eq: "Concept_01.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
