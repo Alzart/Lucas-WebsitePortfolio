@@ -15,7 +15,7 @@ function Concepts() {
         }
       }
       ameublement: file(
-        relativePath: { eq: "03_Sodexo/Design/Ameublement.png" }
+        relativePath: { eq: "03_Sodexo/Design/Ameublement.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 2000) {
