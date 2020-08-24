@@ -4,8 +4,6 @@ import IntroVideo from "./IntroVideo"
 import Team from "./Team"
 import Vision from "./Vision"
 import styled from "styled-components"
-import Design from "./Design"
-import Art from "./Art"
 import Conclusion from "./Conclusion"
 
 function Documentia() {
@@ -48,8 +46,6 @@ function Documentia() {
       <IntroVideo />
       <Team />
       <Vision />
-      <Design />
-      <Art />
       <Conclusion />
       <BackToTop>
         <p onClick={onClickScrollUp}>Back To Top</p>
